@@ -5,7 +5,7 @@ so from all the pools operating at this time, you need to
 choose the pool with the longest lane,
 with equal values - with the largest width.
 
-There is a pools.json file that contains a list of JSON
+There is a 'pools.json' file that contains a list of JSON
 objects that represent data about indoor swimming pools.
 
 The program determines the pool suitable for the boy."""
@@ -21,7 +21,7 @@ with open('pools.json', encoding='utf-8') as file1:
     arr = []
 
     for row in rows:
-        times = row['WorkingHoursSummer']['Понедельник'].split('-')
+        times = row['WorkingHoursSummer']['Monday'].split('-')
         h_s = times[0].split(':')
         h_e = times[1].split(':')
         time_s = time(int(h_s[0]), int(h_s[1]))
