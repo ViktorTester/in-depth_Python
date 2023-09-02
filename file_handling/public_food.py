@@ -1,4 +1,4 @@
-"""There is a food_services.json file containing a list of
+"""There is a 'food_services.json' file containing a list of
 JSON objects that represent food service data.
 
 The program determines the district with the most establishments
@@ -18,13 +18,14 @@ with open('food_services.json', encoding='utf-8') as file1:
         if row['District'] not in d:
             d[row['District']] = 1
         else:
-            d[row['District']] += 1
+            d[row['District']] = d.get(row['District'], 0) + 1
 
-        if row['IsNetObject'] == 'yes':
-            if row['OperatingCompany'] not in d2:
-                d2[row['OperatingCompany']] = 1
+    for x in rows:
+        if x['IsNetObject'] == 'да':
+            if x['OperatingCompany'] not in d2:
+                d2[x['OperatingCompany']] = 1
             else:
-                d2[row['OperatingCompany']] += 1
+                d2[x['OperatingCompany']] = d2.get(x['OperatingCompany'], 0) + 1
 
     for key, value in d.items():
         if value == max(d.values()):
