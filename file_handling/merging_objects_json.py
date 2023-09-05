@@ -1,4 +1,4 @@
-"""There are two files э and э,
+"""There are two files 'file1' and 'file2',
 each containing a single JSON object.
 
 The program merges two given JSON objects into one JSON object,
