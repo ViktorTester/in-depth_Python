@@ -4,6 +4,8 @@ its length is 9 or more characters
 it contains large and small letters of any alphabet
 it contains at least one digit
 
+The program requires you to enter a new password until a good one is entered.
+
 The EAFP-style is_good_password() function takes one argument:
 
 string — arbitrary string
@@ -31,7 +33,7 @@ class DigitError(PasswordError):
     pass
 
 
-def is_good_password(string: str) -> bool:
+def is_good_password(string: str) -> LengthError | LetterError | DigitError | str:
     c_upper = 0
     c_lower = 0
     c_digit = 0
@@ -44,13 +46,27 @@ def is_good_password(string: str) -> bool:
         elif i.isdigit():
             c_digit += 1
 
-    if len(string) < 9:
-        raise LengthError
+    try:
+        if len(string) < 9:
+            raise LengthError('LengthError')
+        if c_upper < 1 or c_lower < 1:
+            raise LetterError('LetterError')
+        if c_digit < 1:
+            raise DigitError('DigitError')
+    except LengthError as len_e:
+        return len_e
+    except LetterError as let_e:
+        return let_e
+    except DigitError as d_e:
+        return d_e
+    else:
+        return 'Success!'
 
-    if c_upper < 1 or c_lower < 1:
-        raise LetterError
 
-    if c_digit < 1:
-        raise DigitError
-
-    return True
+while True:
+    result = is_good_password(input())
+    if result == 'Success!':
+        print(result)
+        break
+    else:
+        print(result)
