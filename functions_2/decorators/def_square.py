@@ -1,4 +1,4 @@
-"""The square decorator raises the return value of the function being decorated to the second power.
+"""The 'square' decorator raises the return value of the function being decorated to the second power.
 
 The decorator also stores the name and docstring of the function being decorated."""
 

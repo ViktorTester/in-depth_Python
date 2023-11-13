@@ -1,4 +1,4 @@
-"""The make_html() decorator takes one argument:
+"""The 'make_html' decorator takes one argument:
 
 tag - HTML tag, for example del
 

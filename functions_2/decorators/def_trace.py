@@ -1,4 +1,4 @@
-"""The trace decorator displays debugging information about the
+"""The 'trace' decorator displays debugging information about the
 function being decorated as it runs, such as the function name,
 the arguments passed, and the return value."""
 

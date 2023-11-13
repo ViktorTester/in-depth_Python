@@ -1,4 +1,4 @@
-"""The takes_positive decorator checks that all arguments passed
+"""The 'takes_positive' decorator checks that all arguments passed
 to the function being decorated are positive integers."""
 
 from functools import wraps
