@@ -1,4 +1,4 @@
-"""The returns_string decorator checks that the return value of the function
+"""The 'returns_string' decorator checks that the return value of the function
 being decorated is of type str. If the return value is of some other type,
 the decorator raises a TypeError exception."""
 

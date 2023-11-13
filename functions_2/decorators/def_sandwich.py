@@ -1,4 +1,4 @@
-"""The sandwich decorator displays the texts:
+"""The 'sandwich' decorator displays the texts:
 
 ---- Top slice of bread ----
 ---- Bottom slice of bread ----

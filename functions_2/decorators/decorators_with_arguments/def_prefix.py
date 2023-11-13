@@ -1,4 +1,4 @@
-"""The prefix decorator takes two arguments in the following order:
+"""The 'prefix' decorator takes two arguments in the following order:
 
 string — arbitrary string
 to_the_end - boolean value, defaults to False

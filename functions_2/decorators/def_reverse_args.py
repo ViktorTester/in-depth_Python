@@ -1,4 +1,4 @@
-"""The reverse_args decorator passes all positional arguments
+"""The 'reverse_args' decorator passes all positional arguments
 to the func function being decorated in reverse order."""
 
 
