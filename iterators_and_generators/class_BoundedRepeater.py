@@ -7,7 +7,6 @@ times — natural number
 The BoundedRepeater class iterator generates the value
 'obj' 'times' times and then raises a StopIteration exception."""
 
-
 class BoundedRepeater:
     def __init__(self, obj, times):
         self.obj = obj
@@ -23,3 +22,8 @@ class BoundedRepeater:
             return self.obj
         else:
             raise StopIteration
+
+
+
+
+
